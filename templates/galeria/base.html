@@ -13,7 +13,14 @@
     <link rel="stylesheet" href="{% static '/styles/style.css' %}">
 </head>
 <body>
-{% block content %}
-{% endblock%}
+<div class="pagina-inicial">
+    {% include 'galeria/partials/_header.html' %}
+    <main class="principal">
+        {% include 'galeria/partials/_menu_lateral.html' %}
+        {% block content %}{% endblock %}
+    </main>
+
+</div>
+{% include 'galeria/partials/_footer.html' %}
 </body>
 </html>
